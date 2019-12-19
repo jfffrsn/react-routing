@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-import './NewPost.module.css';
+import './NewPost.css';
 
 class NewPost extends Component {
     state = {
         title: '',
         content: '',
         author: 'Max'
+    }
+
+    componentDidMount () {
+        console.log(this.props);
     }
 
     postDataHandler = () => {
@@ -21,11 +25,6 @@ class NewPost extends Component {
                 console.log(response);
             });
     }
-
-componentDidMount () {
-    console.log(this.props);
-}
-
 
     render () {
         return (
